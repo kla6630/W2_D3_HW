@@ -161,7 +161,34 @@ console.log(
   "<----------------------------------------Esercizio 05--------------------------------------->"
 );
 
-//for (let index = 0; index < starWarsCharacters.length; index++) {
+for (let index = 0; index < starWarsCharacters.length; index++) {
+  switch (starWarsCharacters[index].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[index]);
+      break;
+
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[index]);
+      break;
+
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[index]);
+      break;
+
+    case "red":
+      eyeColor.red.push(starWarsCharacters[index]);
+      break;
+
+    case "blue-gray":
+      eyeColor["blue-gray"].push(starWarsCharacters[index]);
+      break;
+
+      break;
+    default:
+      break;
+  }
+}
+console.log(eyeColor);
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
@@ -197,13 +224,49 @@ console.log(
   "<----------------------------------------Esercizio 07--------------------------------------->"
 );
 
+switch (true) {
+  case totalMass < 500:
+    console.log("Ship is under loaded");
+    break;
+
+  case totalMass === 500:
+    console.log("Ship is half loaded");
+    break;
+
+  case totalMass > 700 && totalMass <= 900:
+    console.log("Warning: Load is over 70");
+    break;
+
+  case totalMass > 900 && totalMass <= 1000:
+    console.log("Critical Load: Over 900");
+    break;
+
+  case totalMass > 1000:
+    console.log("DANGER! OVERLOAD ALERT: Jump ship now!");
+    break;
+
+  default:
+    console.log("No data provided");
+}
+
 /* ESERCIZIO 8
 
-Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
+Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "droid" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
 console.log(
   "<----------------------------------------Esercizio 08--------------------------------------->"
 );
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const character = starWarsCharacters[i];
+
+  if (character.gender === "n/a") {
+    character.gender = "droid";
+  }
+}
+
+console.log(starWarsCharacters);
+
 /* EXTRA ESERCIZIO 9
 
 Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome"
@@ -216,10 +279,12 @@ Una volta fatto, crea un console.log() per controllare la proprietà length di "
 console.log(
   "<----------------------------------------Esercizio 09--------------------------------------->"
 );
+
 /* EXTRA ESERCIZIO 10
 
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
+
 console.log(
   "<----------------------------------------Esercizio 10--------------------------------------->"
 );
