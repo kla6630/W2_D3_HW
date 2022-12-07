@@ -160,11 +160,8 @@ console.log(eyeColor);
 console.log(
   "<----------------------------------------Esercizio 05--------------------------------------->"
 );
-/* for (let index = 0; index < starWarsCharacters.length; index++) {
-  eyeColor.push(starWarsCharacters[index].name);
-}
-console.log(characters);
-/*
+
+//for (let index = 0; index < starWarsCharacters.length; index++) {
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
@@ -176,8 +173,8 @@ console.log(
 let i = 0;
 let totalMass = 0;
 
-while (i < starWarsCharacters.lengh) {
-  totalMass = +Number(starWarsCharacters[i].mass);
+while (i < starWarsCharacters.length) {
+  totalMass = totalMass + parseInt(starWarsCharacters[i].mass);
   i++;
 }
 console.log(totalMass);
